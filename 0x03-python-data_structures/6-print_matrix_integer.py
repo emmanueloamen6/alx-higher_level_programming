@@ -1,0 +1,10 @@
+#!/usr/bin/python3
+def print_matrix_integer(matrix=[[]]):
+    if len(matrix) <= 1:
+        print("")
+    for arr in matrix:
+        for n in arr:
+            if n != arr[-1]:
+                print("{:d}".format(n), end='')
+            else:
+                print("{:d}".format(n))
