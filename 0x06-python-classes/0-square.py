@@ -1,7 +1,8 @@
 #!/usr/bin/python3
 
-"""Define a class"""
+"""Define a class Square."""
+
 
 class Square:
-    """Represent a class"""
+    """Represent a square."""
     pass
