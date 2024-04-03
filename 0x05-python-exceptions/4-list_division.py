@@ -12,20 +12,18 @@ def list_division(my_list_1, my_list_2, list_length):
         A new list of length list_length containing all the divisions.
     """
     new_list = []
-    result = 0
-    i = 0
     for i in range(0, list_length):
         try:
-            result = my_list_1[i] / my_list_2[i]
+            div = my_list_1[i] / my_list_2[i]
         except TypeError:
-            result = 0
             print("wrong type")
+            div = 0
         except ZeroDivisionError:
-            result = 0
             print("division by 0")
+            div = 0
         except IndexError:
-            reult = 0
             print("out of range")
+            div = 0
         finally:
-            new_list.append(result)
-    return new_list
+            new_list.append(div)
+    return (new_list)
