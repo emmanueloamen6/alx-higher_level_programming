@@ -2,14 +2,8 @@
 
 def safe_print_division(a, b):
     """
-    Function that divides 2 integers and prints the result.
-
-    Args:
-        a (int): first integer.
-        b (int): Second integer.
-
-    Return:
-        return the value.
+    divides two integers and prints the result
+    catches divide by zero exception
     """
     try:
         value = a / b
