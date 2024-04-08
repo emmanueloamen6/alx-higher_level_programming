@@ -51,8 +51,9 @@ class Rectangle:
             return (0)
         return ((self.__width + self.__height) + (
                 self.__width + self.__height))
+
     def __str__(self):
-        """Return the printable representation of the Rectangle.
+        """Return the printable Rectangle.
 
         Represents the rectangle with the # character.
         """
