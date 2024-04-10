@@ -1,3 +1,4 @@
+#!/usr/bin/python3
 """Defines a Rectangle class."""
 
 
@@ -48,29 +49,28 @@ class Rectangle:
         """Return the perimeter of the Rectangle."""
         if self.__width == 0 or self.__height == 0:
             return (0)
-        return ((self.__width + self.__height) + (
-                self.__width + self.__height))
+        return ((self.__width * 2) + (self.__height * 2))
 
     def __str__(self):
-        """Return the printable Rectangle.
+        """Return the printable representation of the Rectangle.
 
         Represents the rectangle with the # character.
         """
         if self.__width == 0 or self.__height == 0:
             return ("")
 
-        rec = []
+        rect = []
         for i in range(self.__height):
-            [rec.append('#') for j in range(self.__width)]
+            [rect.append('#') for j in range(self.__width)]
             if i != self.__height - 1:
-                rec.append("\n")
-        return ("".join(rec))
+                rect.append("\n")
+        return ("".join(rect))
 
     def __repr__(self):
         """Return the string representation of the Rectangle."""
-        rec = "Rectangle(" + str(self.__width)
-        rec += ", " + str(self.__height) + ")"
-        return (rec)
+        rect = "Rectangle(" + str(self.__width)
+        rect += ", " + str(self.__height) + ")"
+        return (rect)
 
     def __del__(self):
         """Print a message for every deletion of a Rectangle."""
