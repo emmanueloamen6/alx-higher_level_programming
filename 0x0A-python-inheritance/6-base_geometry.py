@@ -3,6 +3,7 @@
 
 class  BaseGeometry:
     """BaseGeometry class"""
+    @classmethod
     def area(self):
         """Method for calculating area."""
 
