@@ -1,9 +1,9 @@
 #!/usr/bin/python3
-"""Define a function that returns an object (Python data structure) represented by a JSON string.
+"""Define a function of Python object JSON.
 """
 import json
 
 def from_json_string(my_str):
-    """ returns an object (Python data structure) represented by a JSON string.
+    """Represent an object (Python data structure) to JSON string.
     """
     return json.loads(my_str)
