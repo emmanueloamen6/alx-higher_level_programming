@@ -111,5 +111,4 @@ class Rectangle(Base):
         """
         Return area of the rectangle
         """
-        area = self.width * self.height
-        return area
+        return self.width * self.height
