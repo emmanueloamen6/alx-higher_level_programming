@@ -112,3 +112,16 @@ class Rectangle(Base):
         Return area of the rectangle
         """
         return self.width * self.height
+    def display(self):
+        """Print string representation of rectangle."""
+        if self.__y > 0:
+            for i in range(self.__y):
+                print()
+            self.__y = 0
+        for i in range(self.__height):
+            for j in range(self.__width):
+                if self.__y == j:
+                    print("" * self.__x, end="")
+                print("#", end="")
+            print()
+
