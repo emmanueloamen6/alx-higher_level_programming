@@ -31,6 +31,11 @@ class Rectangle(Base):
         self.y = y
         super().__init__(id)
 
+    def __str__(self):
+        """Rectangle string"""
+        return ("[Rectangle] ({}) {:d}/{:d} - {:d}/{:d}".
+                format(self.id, self.__x, self.__y,
+                    self.__width, self.__height))
     @property
     def width(self):
         """
@@ -112,3 +117,16 @@ class Rectangle(Base):
         Return area of the rectangle
         """
         return self.width * self.height
+    def display(self):
+        """Print string representation of rectangle."""
+        if self.__y > 0:
+            for i in range(self.__y):
+                print()
+            self.__y = 0
+        for i in range(self.__height):
+            for j in range(self.__width):
+                if self.__y == j:
+                    print("" * self.__x, end="")
+                print("#", end="")
+            print()
+
