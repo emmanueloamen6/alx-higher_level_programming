@@ -12,9 +12,9 @@ if (size === undefined || isNaN(parseInt(size))) {
 } else {
   for (let j = 0; j < parseInt(size); j++) {
     let row = '';
-      for (let i = 0; i < parseInt(size); i++) {
-        row += 'X';
-      }
-      console.log(row);
+    for (let i = 0; i < parseInt(size); i++) {
+      row += 'X';
+    }
+    console.log(row);
   }
 }
