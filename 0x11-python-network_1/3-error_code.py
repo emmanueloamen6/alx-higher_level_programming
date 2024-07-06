@@ -7,8 +7,11 @@ import urllib.request
 import sys
 
 if __name__ == "__main__":
+    urllib = sys.argv[1]
+    request = urllib.request.Request(urllib)
+
     try:
-        with urllib.request.urlopen(sys.argv[1]) as response:
+        with urllib.request.urlopen(request) as response:
             print(response.read().decode("utf-8"))
     except urllib.error.HTTPError as error:
         print("Error code: {}".format(error.code))
