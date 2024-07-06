@@ -4,14 +4,13 @@ and displays the body of the response (decoded in utf-8)
 """
 
 import urllib.request
+import urllib.error
 import sys
 
 if __name__ == "__main__":
-    urllib = sys.argv[1]
-    request = urllib.request.Request(urllib)
 
     try:
-        with urllib.request.urlopen(request) as response:
+        with urllib.request.urlopen(sys.argv[1]) as response:
             print(response.read().decode("ascii"))
     except urllib.error.HTTPError as error:
         print("Error code: {}".format(error.code))
